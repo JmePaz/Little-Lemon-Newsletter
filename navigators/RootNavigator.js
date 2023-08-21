@@ -7,8 +7,9 @@ const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
   return (
-    <Stack.Navigator>
-      {/* Set up stack navigation to move between welcome screen and subscribe screen here */}
+    <Stack.Navigator initialRouteName="Welcome" screenOptions={{headerTitleAlign: 'center'}} >
+      <Stack.Screen name="Welcome" component={WelcomeScreen}/>
+      <Stack.Screen name="Subscribe" component={SubscribeScreen}/>
     </Stack.Navigator>
   );
 };
